@@ -1,7 +1,9 @@
 {
   "name": "gquemener/value-object",
   "require": {
-    "doctrine/orm": "^3.2"
+    "doctrine/orm": "^3.2",
+    "ramsey/uuid": "^4.7",
+    "symfony/cache": "^7.1"
   },
   "license": "MIT",
   "autoload": {
@@ -14,5 +16,8 @@
       "name": "Gildas Quéméner",
       "email": "gildas.quemener@gmail.com"
     }
-  ]
+  ],
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.59"
+  }
 }
