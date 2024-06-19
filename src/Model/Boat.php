@@ -13,10 +13,10 @@ final class Boat
     #[ORM\Column]
     private string $id;
 
-    #[ORM\Column]
-    private string $name;
+    #[ORM\Embedded]
+    private BoatName $name;
 
-    public function __construct(string $id, string $name)
+    public function __construct(string $id, BoatName $name)
     {
         $this->id = $id;
         $this->name = $name;
@@ -27,7 +27,7 @@ final class Boat
         return $this->id;
     }
 
-    public function name(): string
+    public function name(): BoatName
     {
         return $this->name;
     }
