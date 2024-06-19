@@ -16,10 +16,14 @@ final class Boat
     #[ORM\Embedded]
     private BoatName $name;
 
-    public function __construct(BoatId $id, BoatName $name)
+    #[ORM\Embedded]
+    private RegistrationCountry $country;
+
+    public function __construct(BoatId $id, BoatName $name, RegistrationCountry $country)
     {
         $this->id = $id->toString();
         $this->name = $name;
+        $this->country = $country;
     }
 
     public function id(): BoatId
