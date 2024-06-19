@@ -11,8 +11,6 @@ use Doctrine\ORM\ORMSetup;
 
 require_once "vendor/autoload.php";
 
-Type::addType(BoatIdType::class, BoatIdType::class);
-
 // Create a simple "default" Doctrine ORM configuration for Attributes
 $config = ORMSetup::createAttributeMetadataConfiguration(
     paths: array(__DIR__."/src"),
